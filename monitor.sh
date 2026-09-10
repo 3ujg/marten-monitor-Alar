@@ -4,15 +4,15 @@
 # peaks töötama
 
 SERVIIS=nginx
-LOG=/var/log/monitor.log
+LOG=$HOME/monitor.log
 KUUPÄEV=$(date)
 
 # kontrollin kas teenus töötab, google ütles nii
-servis $SERVIIS status
+systemctl status $SERVIIS
 
-if [ $? = 0 ]
+if [ $? -eq 0 ]
 then
     echo "$KUUPÄEV - $SERVIIS töötab" >> $LOG
 else
-    echo "$KUUPÄEV - $SERVIIS EI tööta" >> $LOQ
+    echo "$KUUPÄEV - $SERVIIS EI tööta" >> $LOG
 fi
