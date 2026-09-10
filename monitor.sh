@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 # Märteni servermonitor v1.0
 # kirjutatud reedel kell 16:55, varsti koju
 # peaks töötama
@@ -15,4 +16,3 @@ then
     echo "$KUUPÄEV - $SERVIIS töötab" >> $LOG
 else
     echo "$KUUPÄEV - $SERVIIS EI tööta" >> $LOG
-fi
