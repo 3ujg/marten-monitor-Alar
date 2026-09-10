@@ -1,0 +1,9 @@
+# Saladused — Märteni pärand
+.env
+*.key
+
+# Logifailid
+*.log
+
+# macOS rämps, mida keegi ei taha näha
+.DS_Store
